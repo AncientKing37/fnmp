@@ -1,0 +1,12 @@
+[images]
+  remote_images = ["https://source.unsplash.com/.*", "https://images.unsplash.com/.*", "https://ext.same-assets.com/.*", "https://ugc.same-assets.com/.*", "https://placehold.co/.*"]
+
+[build]
+  command = "cd uploads/fortnite-marketplace && bun run build"
+  publish = "uploads/fortnite-marketplace/.next"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
